@@ -34,7 +34,7 @@ const Gallery = () => {
     
     return (
         <>
-        <div className='flex justify-evenly flex-wrap'>
+        <div className='flex md:justify-evenly justify-around min-h-screen items-center flex-wrap'>
             {sortData.length > 0 ? sortData.map((post)=>{
                 return(
                 <Card post={post}/>)
@@ -44,10 +44,10 @@ const Gallery = () => {
         <div className='flex justify-center gap-4.5'>
             <button
             onClick={()=> {setPages(prev => prev > 1 ? prev - 1 : prev)}} 
-            className='bg-amber-300 md:w-40 md:h-10 rounded text-2xl text-black delay-30 transition-transform hover:scale-110'>prev</button>
+            className='bg-amber-300 w-20 md:w-40 md:h-10 rounded text-2xl text-black delay-30 transition-transform hover:scale-110'>prev</button>
             <button 
             onClick={() => {setPages(prev => prev + 1 )}}
-            className='bg-amber-300 md:w-40 md:h-10 rounded text-2xl text-black delay-30 transition-transform hover:scale-110'>next{pages}</button>
+            className='bg-amber-300 w-20 md:w-40 md:h-10 rounded text-2xl text-black delay-30 transition-transform hover:scale-110'>next {pages+1}</button>
             </div>
         </>
     )
