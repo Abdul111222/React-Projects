@@ -1,6 +1,12 @@
 import React from 'react'
-
+import { useState } from 'react'
+import Gallery from '../Gallery'
 const Hero = () => {
+  const [gallery, setGallery]=useState(false)
+  if (gallery == true) {
+    return(<Gallery />)
+  }
+  
     return (
         <div className='flex flex-col justify-center items-center min-h-screen'>
             <div className='flex flex-col text-center '>
@@ -15,6 +21,7 @@ const Hero = () => {
             <br />
             <div className=' flex flex-col md:flex-row items-center gap-4'>
                 <button
+                onClick={()=>{setGallery(true)}}
   className="
     border-3
     h-13
