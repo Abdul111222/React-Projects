@@ -1,7 +1,6 @@
-import { useEffect,useState } from 'react'
 import React from 'react'
-import Card from './components/Card'
-import Navbar from './components/Navbar'
+import { useEffect,useState } from 'react'
+import Card from '../components/Card'
 import axios from "axios";
 
 const Gallery = () => {
