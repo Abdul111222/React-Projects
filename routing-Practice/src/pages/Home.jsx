@@ -1,26 +1,15 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import { useEffect, useState } from 'react'
-import axios, { isCancel, AxiosError } from "axios";
-import WeatherCard from '../components/WeatherCard';
+import { Link, Outlet } from 'react-router-dom'
 
 const Home = () => {
-  const [apiStore, setApiStore] = useState({});
-  const apiCall = async () => {
-    let apiRes = await axios.get("https://api.openweathermap.org/data/2.5/weather?q=Karachi,PK&appid=8cd970a0f8b5b17d3474a14c9587365f&units=metric");
-    if (apiRes.data) {
-      setApiStore(apiRes.data);
-    }
-
-  }
-  useEffect(() => {
-    apiCall();
-  }, []);
   return (
-    <div>
-      <WeatherCard Api={apiStore}/>
+    <div className='flex flex-col items-center min-h-screen justify-center gap-4'>
+      <h1 className="text-4xl font-bold">This is the Home Page..</h1>
+      <button className=
+      'bg-blue-300 h-15  w-45 rounded-3xl text-black font-bold text-1xl cursor-pointer  hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]'><Link to="weather">Go to Weather App</Link>
+      </button>
+      <Outlet />
     </div>
   )
 }
-
 export default Home
