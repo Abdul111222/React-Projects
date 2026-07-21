@@ -4,7 +4,7 @@ import Logo from './Logo'
 import CenterButtons from './CenterButtons'
 import { Link } from 'react-router'
 
-const PublicNavBar = () => {
+const PublicNavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
@@ -108,4 +108,4 @@ const PublicNavBar = () => {
     )
 }
 
-export default PublicNavBar
+export default PublicNavbar

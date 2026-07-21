@@ -10,6 +10,8 @@ import PublicRoute from './pages/PublicRoute'
 import PrivateRoute from './pages/PrivateRoute'
 import Dashboard from './pages/Dashboard'
 import UserProfile from './pages/UserProfile'
+import Auth from './pages/Auth'
+
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path='/services' element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path='/auth' element={<Auth />} />
           </ Route >
         {/* Private Routes */}
           <Route element={<PrivateRoute />} >
@@ -30,6 +33,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard/>}/>
             <Route path="/profile/:id" element={<UserProfile />} />
+            
           </Route>
         </Routes>
       </div>
